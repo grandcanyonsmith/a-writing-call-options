@@ -1,0 +1,21 @@
+.react-loader {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.react-loader img {
+  pointer-events: none;
+  margin: 0 !important;
+  margin: auto !important;
+  padding: 0 !important;
+  height: 100%;
+}
+
+.react-loader.page-loader img {
+  height: 40vmin;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "StockScraperMigrations",
+  "type": "commonjs",
+  "private": true,
+  "main": "./server.js"
+}

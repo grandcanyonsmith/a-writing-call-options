@@ -1,0 +1,231 @@
+.show-stock-page {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.show-stock-page .content {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.show-stock-page header {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.show-stock-page header .row {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #070808;
+}
+
+.show-stock-page header .row.wrap {
+  flex-wrap: wrap;
+}
+
+.show-stock-page header .row ~ .row {
+  margin-top: 1rem;
+}
+
+.show-stock-page header .column {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.show-stock-page header .column.loader {
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}
+
+.show-stock-page header .column ~ .column {
+  align-items: flex-end;
+}
+
+.show-stock-page header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.show-stock-page header h4 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.show-stock-page header h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+.show-stock-page header .stock-price {
+  color: #318231;
+
+}
+
+
+
+.show-stock-page header .stock-price.negative {
+  color: #C33030;
+}
+
+.show-stock-page header table.borderless * {
+  border: none;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 512px) {
+  .show-stock-page header .row.wrap .column {
+    flex: 1 0 100%;
+    align-items: flex-start;
+  }
+
+  .show-stock-page header .row.wrap .column table.borderless {
+    width: 100%;
+  }
+
+  .show-stock-page header .row.wrap .column table.borderless th,
+  .show-stock-page header .row.wrap .column table.borderless td {
+    width: 50%;
+  }
+}
+
+.show-stock-page header table.borderless th {
+  text-align: right;
+  padding: .25rem;
+}
+
+.show-stock-page header table.borderless td {
+  text-align: left;
+  padding: .25rem;
+}
+
+a.download {
+  position: absolute;
+  top: 1vmin;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #2766A7;
+  padding: 12px 8px;
+  text-align: center;
+  border-radius: .25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+table.datatable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  height: 100%;
+  overflow: auto;
+}
+
+table.datatable td,
+table.datatable th,
+table.datatable tfoot th button {
+  border: 1px solid #DDDDDD;
+  padding: 8px;
+}
+
+table.datatable th,
+table.datatable tfoot th button {
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+table.datatable tfoot th {
+  padding: 0;
+}
+
+table.datatable tfoot th button {
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+table.datatable tfoot th button:disabled {
+  background: #6A906b;
+  cursor: not-allowed
+}
+
+table.datatable tbody tr:nth-child(even){
+  background-color: #222222;
+}
+
+table.datatable tbody tr:hover {
+  background-color: #888888;
+}
+
+table.datatable thead tr th:hover {
+  background-color: #888888;
+}
+
+
+table.datatable tbody tr:hover td {
+  border-color: #EEEEEE;
+}
+
+
+.stock-options {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.stock-options.loader {
+  padding: 10vmin;
+}
+
+.error {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  color: #C33030;
+}
+
+.retry {
+  margin: 1rem 0;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #2766A7;
+  padding: 12px 8px;
+  text-align: center;
+  border-radius: .25rem;
+  font-weight: bold;
+}

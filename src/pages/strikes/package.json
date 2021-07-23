@@ -1,0 +1,5 @@
+{
+  "name": "StrikesPage",
+  "private": true,
+  "main": "./strikes.js"
+}

@@ -1,0 +1,77 @@
+{
+  "name": "stockscraper",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@alpacahq/alpaca-trade-api": "^1.4.2",
+    "@fast-csv/format": "^4.3.5",
+    "cookie-parser": "~1.4.4",
+    "date-fns-timezone": "^0.1.4",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "node-fetch": "^2.6.1",
+    "nvm": "^0.0.4",
+    "pg": "^8.5.1",
+    "psql": "^0.0.1",
+    "puppeteer": "^6.0.0",
+    "supports-color": "^8.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "concurrently": "^5.3.0",
+    "http-proxy-middleware": "^1.0.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn start:server\" \"yarn start:react\"",
+    "start:react": "react-scripts start",
+    "start:server": "NODE_ENV=development PORT=5000 yarn serve",
+    "build": "yarn build:clean && yarn build:create && yarn build:copy",
+    "build:clean": "rm -rf server/build",
+    "build:create": "react-scripts build",
+    "build:copy": "mv build server/",
+    "db:migrate": "node -r dotenv/config server/db/migrate.js",
+    "db:rollback": "node -r dotenv/config server/db/rollback.js",
+    "serve": "node -r dotenv/config server/server.js",
+    "work": "node -r dotenv/config server/worker.js",
+    "work:deviations": "node -r dotenv/config server/workers/deviation-list.js",
+    "work:options": "node -r dotenv/config server/workers/option-list.js",
+    "work:stocks": "node -r dotenv/config server/workers/stock-list.js",
+    "work:strikes": "node -r dotenv/config server/workers/strike-list.js",
+    "tickers": "node -r dotenv/config server/jobs/fetch-tickers.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": "15.x"
+  }
+}

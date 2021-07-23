@@ -1,0 +1,10 @@
+{
+  "name": "stockscraper",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  }
+}

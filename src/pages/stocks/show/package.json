@@ -1,0 +1,5 @@
+{
+  "name": "StocksShowPage",
+  "private": true,
+  "main": "./show.js"
+}

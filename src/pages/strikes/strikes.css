@@ -1,0 +1,84 @@
+.strike-page {
+  position: relative;
+  padding-top: 4rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.strike-page .content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+a.download {
+  position: absolute;
+  top: 1vmin;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #2766A7;
+  padding: 12px 8px;
+  text-align: center;
+  border-radius: .25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+table.datatable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  height: 100%;
+  overflow: auto;
+}
+
+table.datatable td,
+table.datatable th,
+table.datatable tfoot th button {
+  border: 1px solid #DDDDDD;
+  padding: 8px;
+}
+
+table.datatable th,
+table.datatable tfoot th button {
+  font-weight: bold;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+table.datatable tfoot th {
+  padding: 0;
+}
+
+table.datatable tfoot th button {
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+table.datatable tfoot th button:disabled {
+  background: #6A906b;
+  cursor: not-allowed;
+}
+
+table.datatable tbody tr:nth-child(even){
+  background-color: #222222;
+}
+
+table.datatable tbody tr:hover {
+  background-color: #888888;
+}
+
+table.datatable tbody tr:hover td {
+  border-color: #EEEEEE;
+}

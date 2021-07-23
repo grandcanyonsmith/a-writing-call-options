@@ -1,0 +1,49 @@
+/* @font-face {
+  font-family: "SilomBol";
+  src: local("SilomBol"), url(fonts/SilomBol.ttf) format("truetype");
+} */
+/* @font-face {
+  font-family: "Computer-Regular";
+  src: local("Computer-Regular"), url(fonts/Computer-Regular.ttf) format("truetype");
+
+} */
+
+@font-face {
+  font-family: "Rene Bieder  Milliard Medium";
+  src: local("Rene Bieder  Milliard Medium"), url(fonts/Rene Bieder  Milliard Medium.woff) format("truetype");
+}
+
+html, body {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  /* font-family: "SilomBol", -apple-system, BlinkMacSystemFont, "Computer Regular", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+
+  /* font-family: "Computer-Regular"; */
+  font-family: "Rene Bieder  Milliard Medium";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.2;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body * {
+  box-sizing: border-box;
+}
