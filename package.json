@@ -21,8 +21,8 @@
     "supports-color": "^8.1.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.1.10",
     "concurrently": "^5.3.0",
     "http-proxy-middleware": "^1.0.6",
@@ -44,7 +44,7 @@
     "db:rollback": "node -r dotenv/config server/db/rollback.js",
     "serve": "node -r dotenv/config server/server.js",
     "work": "node -r dotenv/config server/worker.js",
-    "work:deviations": "node -r dotenv/config server/workers/deviation-list.js",
+    "work:deviations": "node -r dotenv/config server/jobs/deviations.js",
     "work:options": "node -r dotenv/config server/workers/option-list.js",
     "work:stocks": "node -r dotenv/config server/workers/stock-list.js",
     "work:strikes": "node -r dotenv/config server/workers/strike-list.js",

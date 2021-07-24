@@ -2,6 +2,7 @@ import { Connection } from "../db/connection.js"
 import { getScheduledDates } from "../common/get-scheduled-dates.js"
 import { debugWorker as debug, error } from "../common/debug.js"
 
+
 function invalidNumber(num){
   return isNaN(num) || !isFinite(num)
 }
@@ -90,8 +91,10 @@ export async function calculateDeviations(givenDate) {
   }
 
   const variance = totalDeviation / count
+  console.log(variance)
 
   const standardDeviation = Math.sqrt(variance)
+  console.log(standardDeviation)
 
   debug(" -- Calculating Z-Scores")
 

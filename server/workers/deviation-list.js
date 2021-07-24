@@ -14,6 +14,8 @@ try {
   debug(`Finished Calculating Deviations @ ${new Date(ended + dateOffset).toLocaleString("en-US")}`)
 
   debug(`Elapsed Time: ${elapsedTime}`)
+  
 } catch(err) {
+  console.log(err)
   error(err)
 }

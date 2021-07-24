@@ -15,11 +15,13 @@ export function getScheduledDates(date) {
   const thirty = new Date(date)
   thirty.setDate(thirty.getDate() - 30)
   thirty.setHours(0, 0, 0, 0)
-  
+  console.log(schedule)
   return {
     schedule: +date,
     date,
     now,
     thirty
   }
+  
 }
+getScheduledDates()

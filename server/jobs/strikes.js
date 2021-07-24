@@ -82,6 +82,7 @@ export async function calculateStrikes(givenDate) {
                       premiumReturn = premium / currentPrice,
                       apr = (premiumReturn / daysTilExp) * 365,
                       odds = invalidNumber(apr) ? 0 : apr * percentOut
+                      console.log(premium)
 
                 await Connection.transaction(async (client) => {
                   await client.query("DELETE FROM stock_strikes WHERE volatility_id = $1", [ row.id ])

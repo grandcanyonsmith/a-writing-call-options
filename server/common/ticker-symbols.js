@@ -126,7 +126,6 @@ export const tickerSymbols = [
   "SF",
   "BR",
   "MGNI",
-  "8083",
   "IQ",
   "CGNX"
 ]

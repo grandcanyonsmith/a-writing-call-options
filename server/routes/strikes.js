@@ -42,6 +42,7 @@ const sortBy = {
         "In The Money",
         "Expires",
         "Contract",
+      
       ],
       query = `
         SELECT
