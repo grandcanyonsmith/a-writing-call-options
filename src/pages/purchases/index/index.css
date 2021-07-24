@@ -97,11 +97,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .row ~ .row {
-  border-top: .25rem solid #232a2f;
-  border-bottom: .25rem solid #232a2f;
+  /* border-top: .25rem solid #232a2f; */
+  /* border-bottom: .25rem solid #232a2f; */
   border-radius: 1rem;
-  border-left: .25rem solid #232a2f;
-  border-right: .25rem solid #232a2f;
+  /* border-left: .25rem solid #232a2f; */
+  /* border-right: .25rem solid #232a2f; */
   background: black;
 }
 
