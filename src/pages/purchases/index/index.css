@@ -211,7 +211,6 @@ h1, h2, h3, h4, h5, h6, p {
   background: #1c1b1b;
   border: .125rem solid #1c1b1b;
   border-top: .25rem solid #1c1b1b;
-  color: ;
 }
 
 .column.btn:disabled {
@@ -231,7 +230,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 12px 8px;
   text-align: center;
   border-radius: .25rem;
-  font-weight: bold;
+  font-weight: light;
 }
 
 .index-purchase-page dl {

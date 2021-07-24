@@ -124,8 +124,10 @@ export function StocksIndexPage() {
             : (
                 <section className="index-stock-page">
                   <header>
-                    <h3>
-                      Total Min. Profit: {
+                  <h3>
+                      Total Min. Profit:
+                  </h3> 
+                  <h3>{
                         totalProfit
                           ? (
                               <span className={positiveOrNegative(totalProfit)}>
@@ -151,7 +153,7 @@ export function StocksIndexPage() {
                           percent_out,
                           apr,
                         } = row || {}
-
+                        
                         const daysLeft = daysBetweenDates(expiration_date, today)
 
                         const maxProfit = forceNumber(
@@ -220,7 +222,7 @@ export function StocksIndexPage() {
                             </div>
                             <div className="column right">
                               <h5 className="requirement-wrapper">
-                                <div className="requirement">Requirement:</div>
+                                <div className="requirement">REQUIREMENT:</div>
                                 <br/>
                                 <div className="requirement-price">{ formatMoney(forceNumber(price) * 100) }</div>
                               </h5>
@@ -237,9 +239,9 @@ export function StocksIndexPage() {
                                 <li>
                                   { formatPercentage(odds) } Top SNS
                                 </li>
-                                <li>
+                                {/* <li>
                                   { formatPercentage(average_odds) } Avg SNS
-                                </li>
+                                </li> */}
                               </ul>
                             </div>
                           </div>

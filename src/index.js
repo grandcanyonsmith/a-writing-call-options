@@ -5,7 +5,7 @@ import { App } from "components/app";
 import reportWebVitals from "./reportWebVitals";
 // import 'fonts/SilomBol.ttf'
 // import 'fonts/Computer-Regular.ttf'
-import 'fonts/Rene Bieder  Milliard Medium.woff'
+// import 'fonts/Rene Bieder  Milliard Medium.woff'
 
 ReactDOM.render(
   <React.StrictMode>

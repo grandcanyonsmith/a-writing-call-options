@@ -24,8 +24,13 @@
 .index-stock-page header {
   width: 100%;
   padding: 1rem;
-  text-align: right;
+  padding-left:.2rem;
+  padding-right:.2rem;
+  /* text-align: right; */
   border-bottom: .25rem solid #070808;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .index-stock-page header h3 {
@@ -68,13 +73,16 @@
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
+  font-weight: normal;
 }
 
 .positive {
-  background: -webkit-linear-gradient(#90ee90, #006400);
+  background: -webkit-linear-gradient(#4CBB17, #006400);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 0.95em;
+  font-size: 0.925em;
+  font-weight: normal;
+  margin-top: .2em;
 }
 
 .negative {
@@ -169,6 +177,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .column.right ul {
   padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .column.right ul li {
@@ -211,7 +222,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: .75em;
   padding-right: .8em;
   text-align: right;
-  border-bottom: .125rem solid;
+  /*  */
   border-right: none;
   border-left: none;
   /* border-image: linear-gradient( grey, rgba(0, 0, 0, 0) ) 1 100%; */
@@ -223,10 +234,10 @@ h1, h2, h3, h4, h5, h6, p {
   
 }
 .requirement {
-  font-size: .6em;
+  font-size: .65em;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .requirement-price {
