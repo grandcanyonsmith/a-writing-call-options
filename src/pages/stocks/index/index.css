@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5, h6, p {
 , #0d0d0d 0%, #000000 80%);
   border-left: none;
   border-top:none;
+  border-right: none;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
   margin: .5em;
@@ -131,15 +132,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .column.left {
     border-image: radial-gradient(closest-side,grey,transparent) 1 100%;
-    flex: 2.2 1;
-    /* background-color: #000000;
-    background-image: linear-gradient(
-147deg
-, #0d0d0d 0%, #000000 80%);
+    border-right: none;
     border-left: none;
-    border-top:none;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em; */
+    flex: 2.2 1;
+
 }
 
 .column.left .row {
@@ -215,6 +211,8 @@ h1, h2, h3, h4, h5, h6, p {
   padding-right: .8em;
   text-align: right;
   border-bottom: .125rem solid;
+  border-right: none;
+  border-left: none;
   border-image: linear-gradient( grey, rgba(0, 0, 0, 0) ) 1 100%;
   font-size: .9rem;
   width: 100%;
