@@ -227,18 +227,38 @@ export function StocksIndexPage() {
                                 <div className="requirement-price">{ formatMoney(forceNumber(price) * 100) }</div>
                               </h5>
                               <ul>
-                                <li>
-                                  { daysLeft } day{ daysLeft > 1 ? "s" : "" }
-                                </li>
-                                <li>
-                                  { formatPercentage(percent_out) } OTM
-                                </li>
-                                <li>
-                                  { formatPercentage(apr) } APR
-                                </li>
-                                <li>
-                                  { formatPercentage(odds) } Top SNS
-                                </li>
+                                <div className="option-info-point-one">
+                                  <div>
+                                    Day{ daysLeft > 1 ? "s" : "" } Left:
+                                  </div>
+                                <div>
+                                   { daysLeft }
+                                  </div>
+                                </div>
+                                <div className="option-info-point-two">
+                                <div>
+                                Out of the $:
+                                </div>
+                                <div>
+                                   { formatPercentage(percent_out) } 
+                                </div>
+                                </div>
+                                <div className="option-info-point-one">
+                                  <div>
+                                  Ann. Prem: 
+                                  </div>
+                                  <div>
+                                    { formatPercentage(apr) }
+                                  </div>
+                                </div>
+                                <div className="option-info-point-two">
+                                  <div>
+                                    Top SNS:
+                                  </div>
+                                  <div>
+                                    { formatPercentage(odds) }
+                                  </div>
+                                </div>
                                 {/* <li>
                                   { formatPercentage(average_odds) } Avg SNS
                                 </li> */}

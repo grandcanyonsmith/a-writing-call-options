@@ -155,7 +155,7 @@ table.datatable tfoot th button {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #4CAF50;
-  color: white;
+  color: #f8f8f8;
 }
 
 table.datatable tfoot th {
@@ -167,7 +167,7 @@ table.datatable tfoot th button {
   cursor: pointer;
   background: transparent;
   border: none;
-  color: white;
+  color: #f8f8ff;
   width: 100%;
   height: 100%;
 }
