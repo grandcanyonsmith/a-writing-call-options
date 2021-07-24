@@ -163,7 +163,8 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: .9rem;
   background-color: #000000;
   border-radius: 1em;
-  border: 1em;
+  
+  /* border: 1em; */
 }
 
 .column.right ul {
@@ -213,7 +214,7 @@ h1, h2, h3, h4, h5, h6, p {
   border-bottom: .125rem solid;
   border-right: none;
   border-left: none;
-  border-image: linear-gradient( grey, rgba(0, 0, 0, 0) ) 1 100%;
+  /* border-image: linear-gradient( grey, rgba(0, 0, 0, 0) ) 1 100%; */
   font-size: .9rem;
   width: 100%;
   display: flex;
