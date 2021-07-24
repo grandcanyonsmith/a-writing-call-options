@@ -229,7 +229,7 @@ export function StrikesPage() {
                                 onClick={previousPage}
                                 disabled={!offset}
                               >
-                                &lt; Previous
+                                &lt; PREVIOUS
                               </button>
                             </th>
                             <th colSpan="7">
@@ -237,7 +237,7 @@ export function StrikesPage() {
                                 onClick={nextPage}
                                 disabled={!rows.length || rows.length < 50}
                               >
-                                Next &gt;
+                                NEXT &gt;
                               </button>
                             </th>
                           </tr>

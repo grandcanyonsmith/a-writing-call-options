@@ -253,14 +253,14 @@ export function StocksIndexPage() {
                       className="column btn align-center"
                       disabled={!offset}
                     >
-                      &lt; Previous
+                      &lt; PREVIOUS
                     </button>
                     <button
                       onClick={nextPage}
                       className="column btn align-center"
                       disabled={!rows.length || (rows.length < 50)}
                     >
-                      Next &gt;
+                      NEXT &gt;
                     </button>
                   </div>
                 </section>

@@ -417,7 +417,7 @@ export function StocksShowPage() {
                                   onClick={previousPage}
                                   disabled={!offset}
                                 >
-                                  &lt; Previous
+                                  &lt; PREVIOUS
                                 </button>
                               </th>
                               <th colSpan="5">
@@ -425,7 +425,7 @@ export function StocksShowPage() {
                                   onClick={nextPage}
                                   disabled={!rows.length || rows.length < 50}
                                 >
-                                  Next &gt;
+                                  NEXT &gt;
                                 </button>
                               </th>
                             </tr>

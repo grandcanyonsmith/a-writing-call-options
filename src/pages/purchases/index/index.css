@@ -208,15 +208,14 @@ h1, h2, h3, h4, h5, h6, p {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background: #318231;
-  cursor: pointer;
-  color: #FFFFFF;
-  border: .125rem solid #FFFFFF;
-  border-top: .25rem solid #FFFFFF;
+  background: #1c1b1b;
+  border: .125rem solid #1c1b1b;
+  border-top: .25rem solid #1c1b1b;
+  color: grey;
 }
 
 .column.btn:disabled {
-  background: #6A906b;
+  background: #1c1b1b;
   color: #000000;
   cursor: not-allowed;
 }

@@ -22,14 +22,14 @@ export function App() {
               className="column btn align-center"
               activeClassName="is-active"
             >
-              Stocks
+              STOCKS
             </NavLink>
             <NavLink
               to="/purchases"
               className="column btn align-center"
               activeClassName="is-active"
             >
-              Purchases
+              PURCHASES
             </NavLink>
           </div>
         </nav>

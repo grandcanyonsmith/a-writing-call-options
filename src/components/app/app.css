@@ -32,6 +32,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  letter-spacing: 0.1em;
+  font-weight: bolder;
 }
 
 .btn {
@@ -52,9 +54,9 @@
 }
 
 nav .column.btn.is-active {
-  background: #FFFFFF;
-  color: #318231;
-  border-color: #FFFFFF;
+  background: #393636;
+  color: white;
+  border-color: #393636;
 
 }
 

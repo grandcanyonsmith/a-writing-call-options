@@ -74,6 +74,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: -webkit-linear-gradient(#90ee90, #006400);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 0.95em;
 }
 
 .negative {
@@ -87,6 +88,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .clickable {
   cursor: pointer !important;
+  
 }
 
 .row ~ .row {
@@ -95,9 +97,18 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 1rem;
   /* border-left: .25rem solid #232a2f; */
   /* border-right: .25rem solid #232a2f; */
-  background: black;
+  background-color: #000000;
+  background-image: linear-gradient(
+147deg
+, #0d0d0d 0%, #000000 80%);
+  border-left: none;
+  border-top:none;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
   margin: .5em;
   box-shadow: -1px 5px 5px 2px #1c1c1c;
+  margin-top: 1.5em;
+  padding-top: .5em;
 }
 
 
@@ -121,13 +132,14 @@ h1, h2, h3, h4, h5, h6, p {
 .column.left {
     border-image: radial-gradient(closest-side,grey,transparent) 1 100%;
     flex: 2.2 1;
-    background-color: #000000;
+    /* background-color: #000000;
     background-image: linear-gradient(
 147deg
 , #0d0d0d 0%, #000000 80%);
     border-left: none;
+    border-top:none;
     border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-bottom-left-radius: 1em; */
 }
 
 .column.left .row {
@@ -168,7 +180,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .value-group {
-  letter-spacing: .05em;
+  letter-spacing: .15em;
   padding: .25rem .5rem;
   font-weight: bold;
   font-size: .9rem;
@@ -242,17 +254,17 @@ h1, h2, h3, h4, h5, h6, p {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background: #318231;
-  cursor: pointer;
-  color: #FFFFFF;
-  border: .125rem solid #318231;
-  border-top: .25rem solid #318231;
+  background: #1c1b1b;
+  border: .125rem solid #1c1b1b;
+  border-top: .25rem solid #1c1b1b;
+  color: grey;
 }
 
 .column.btn:disabled {
-  background: #6A906b;
-  color: #000000;
+  background: #393636;
+  color: white;
   cursor: not-allowed;
+  border-color: #393636;
 }
 
 .retry {
