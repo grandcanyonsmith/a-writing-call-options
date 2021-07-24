@@ -172,6 +172,19 @@ table.datatable tfoot th button {
   height: 100%;
 }
 
+.profit-word {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.option-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 table.datatable tfoot th button:disabled {
   background: #6A906b;
   cursor: not-allowed

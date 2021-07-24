@@ -24,8 +24,8 @@
 .index-stock-page header {
   width: 100%;
   padding: 1rem;
-  padding-left:.2rem;
-  padding-right:.2rem;
+  /* padding-left:.2rem;
+  padding-right:.2rem; */
   /* text-align: right; */
   border-bottom: .25rem solid #070808;
   border-bottom-left-radius: .5rem;
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6, p {
   background: -webkit-linear-gradient(#4CBB17, #006400);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 0.925em;
+  font-size: 0.8em;
   font-weight: normal;
   margin-top: .2em;
 }
@@ -122,7 +122,40 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: .5em;
 }
 
+.profit-wrapper
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: .25em;
+  margin-right: .25em;
+  padding-left: .8em;
+  padding-right: .8em;
+}
 
+.profit-word {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: .85em;
+
+}
+
+.min-max-profit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 1.25em; 
+  padding-left: .25em;
+  padding-right: .25em;
+  font-size: 1.25em;
+}
+
+.min-max-divider {
+  /* padding-top: .25em; */
+  padding-left:.25em;
+  padding-right:.25em;
+}
 
 .row .row {
   border: 0;
@@ -173,6 +206,9 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: .9rem;
   background-color: #1c1c1e;
   border-radius: 1em;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; */
   
   /* border: 1em; */
 }
@@ -180,11 +216,17 @@ h1, h2, h3, h4, h5, h6, p {
 .column.right ul {
   display: flex;
   padding: 0.25rem;
-  /* padding-top: 0.1rem; */
+  padding-top: 0rem;
   padding-bottom: 0rem;
   flex-direction: column;
   justify-content: space-evenly;
 
+}
+.option-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: .5em;
 }
 
 .column.right ul .option-info-point-one {
@@ -203,6 +245,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
 }
 
 .column.right ul .option-info-point-two {
@@ -221,6 +264,11 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
+}
+
+.option-info-point-one .positive {
+  font-size: .95em;
 }
 
 .value-group {
@@ -277,10 +325,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .requirement-price {
-  /* font-size: .7em; */
+  font-size: .75em;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 

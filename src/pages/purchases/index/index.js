@@ -229,8 +229,8 @@ export function PurchasesIndexPage() {
                                 <div className="column">
                                   <div className="value-group">
                                     <h3>
-                                      {ticker} <span className={positiveOrNegative(latest_price)}>
-                                        { formatMoney(latest_price) }
+                                        {ticker} <span className={positiveOrNegative(latest_price)}>
+                                        { formatMoney(latest_price).slice(0,-3) }
                                       </span>
                                     </h3>
                                     <p className={positiveOrNegative(latest_price - price)}>
@@ -243,7 +243,7 @@ export function PurchasesIndexPage() {
                                     </h4>
                                     <p className={positiveOrNegative(latest_bid - bid)}>
                                       { formatMoney(latest_bid) } <span className={positiveOrNegative(latest_bid - bid)}>
-                                        { formatChange(latest_bid, bid) }
+                                        { formatChange((latest_bid, bid).slice(0,-3)) }
                                       </span>
                                     </p>
                                   </div>
@@ -314,7 +314,7 @@ export function PurchasesIndexPage() {
                                   Option:
                                 </dt>
                                 <dd>
-                                  { formatMoney(bid) } <span className={positiveOrNegative(latest_bid - bid)}>
+                                  { formatMoney(bid).slice(0,-3) } <span className={positiveOrNegative(latest_bid - bid)}>
                                     { formatChange(latest_bid, bid, true) }
                                   </span>
                                 </dd>

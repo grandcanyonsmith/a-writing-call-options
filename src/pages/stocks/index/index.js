@@ -125,7 +125,7 @@ export function StocksIndexPage() {
                 <section className="index-stock-page">
                   <header>
                   <h3>
-                      Total Min. Profit:
+                      TOTAL MIN. PROFIT:
                   </h3> 
                   <h3>{
                         totalProfit
@@ -175,7 +175,7 @@ export function StocksIndexPage() {
                           >
                             <div className="column left">
                               <div className="row">
-                                <div className="column">
+                                <div className="column option-display">
                                   <div className="value-group stock-and-price">
                                     <h3>
                                       {ticker}
@@ -200,34 +200,65 @@ export function StocksIndexPage() {
                                     </p>
                                   </div>
                                 </div>
-                                <div className="column align-right">
+                                {/* <div className="column align-right">
                                   <div className="value-group">
                                     <h3>
                                       Min Profit:
                                     </h3>
                                     <p className={positiveOrNegative(bid)}>
-                                      { formatMoney(forceNumber(bid) * 100) }
-                                    </p>
-                                  </div>
-                                  <div className="value-group">
-                                    <h3>
-                                      Max Profit:
-                                    </h3>
-                                    <p className={positiveOrNegative(maxProfit)}>
-                                      { formatMoney(maxProfit) }
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
+                                      {/* { (formatMoney(forceNumber(bid) * 100)).split(0,-3) } */}
+                                      {/* { formatMoney(forceNumber(bid) * 100).slice(0,-3) } */}
+                                    {/* </p> */}
+                                  {/* </div> */}
+                                  {/* <div className="value-group"> */}
+                                    {/* <h3> */}
+                                      {/* Max Profit: */}
+                                    {/* </h3> */}
+                                    {/* <p className={positiveOrNegative(maxProfit)}> */}
+                                    {/* { formatMoney(forceNumber(maxProfit)).slice(0,-3) } */}
+                                      
+                                    {/* </p> */}
+                                  {/* </div> */}
+                                {/* </div> */} 
+                              </div> 
                             </div>
                             <div className="column right">
                               <h5 className="requirement-wrapper">
                                 <div className="requirement">REQUIREMENT:</div>
                                 <br/>
-                                <div className="requirement-price">{ formatMoney(forceNumber(price) * 100) }</div>
+                                <div className="requirement-price">{ formatMoney(forceNumber(price) * 100).slice(0,-3) }</div>
+                                
                               </h5>
+                              <h5 className="profit-wrapper">
+                              <div className="profit-word">
+                              PROFIT:
+                              </div>
+                              <div className="min-max-profit">
+                              <div className={positiveOrNegative(bid)}>
+                                      { (formatMoney(forceNumber(bid) * 100)).slice(0,-3) }
+                              </div>
+                              <div className="min-max-divider">
+                              - 
+                              </div>
+                              <div className={positiveOrNegative(maxProfit)}>
+                                      { formatMoney(maxProfit).slice(0,-3) }
+                                    </div>
+                                    </div>  
+                              </h5>
+                              
                               <ul>
-                                <div className="option-info-point-one">
+                              <div className="option-info-point-one">
+                                  {/* <div>
+                                  Ann. Prem: 
+                                  </div> */}
+                                  <div>
+                                    Premium:
+                                  </div>
+                                  <div >
+                                    { formatPercentage(premium_return) }
+                                  </div>
+                                </div>
+                                <div className="option-info-point-two">
                                   <div>
                                     Day{ daysLeft > 1 ? "s" : "" } Left:
                                   </div>
@@ -235,7 +266,7 @@ export function StocksIndexPage() {
                                    { daysLeft }
                                   </div>
                                 </div>
-                                <div className="option-info-point-two">
+                                <div className="option-info-point-one">
                                 <div>
                                 Out of the $:
                                 </div>
@@ -243,17 +274,9 @@ export function StocksIndexPage() {
                                    { formatPercentage(percent_out) } 
                                 </div>
                                 </div>
-                                <div className="option-info-point-one">
-                                  <div>
-                                  Ann. Prem: 
-                                  </div>
-                                  <div>
-                                    { formatPercentage(apr) }
-                                  </div>
-                                </div>
                                 <div className="option-info-point-two">
                                   <div>
-                                    Top SNS:
+                                    Smith Rank:
                                   </div>
                                   <div>
                                     { formatPercentage(odds) }

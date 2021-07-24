@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .column {
   flex: 1;
+  
 }
 
 .column.align-right {
