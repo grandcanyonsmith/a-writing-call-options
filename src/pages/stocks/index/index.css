@@ -28,6 +28,8 @@
   padding-right:.2rem;
   /* text-align: right; */
   border-bottom: .25rem solid #070808;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -108,7 +110,7 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #000000;
   background-image: linear-gradient(
 147deg
-, #0d0d0d 0%, #000000 80%);
+, #0d0d0d 0%, #070808 80%);
   border-left: none;
   border-top:none;
   border-right: none;
@@ -139,9 +141,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .column.left {
-    border-image: radial-gradient(closest-side,grey,transparent) 1 100%;
+    /* border-image: radial-gradient(closest-side,grey,transparent) 1 100%;
     border-right: none;
-    border-left: none;
+    border-left: none; */
     flex: 2.2 1;
 
 }
