@@ -127,16 +127,16 @@ export function StocksIndexPage() {
                   <h3>
                       TOTAL MIN. PROFIT:
                   </h3> 
-                  <h3>{
+                  <h2>{
                         totalProfit
                           ? (
                               <span className={positiveOrNegative(totalProfit)}>
-                                { formatMoney(totalProfit) }
+                                { formatMoney(totalProfit).slice(0,-3) }
                               </span>
                             )
                           : "N/A"
                         }
-                    </h3>
+                    </h2>
                   </header>
                   <div className="content">
                     {
@@ -251,32 +251,32 @@ export function StocksIndexPage() {
                                   {/* <div>
                                   Ann. Prem: 
                                   </div> */}
-                                  <div>
-                                    Premium:
+                                  <div className="option-info-type">
+                                    PREMIUM:
                                   </div>
                                   <div >
                                     { formatPercentage(premium_return) }
                                   </div>
                                 </div>
                                 <div className="option-info-point-two">
-                                  <div>
-                                    Day{ daysLeft > 1 ? "s" : "" } Left:
+                                  <div className="option-info-type">
+                                    DAY{ daysLeft > 1 ? "S" : "" } LEFT:
                                   </div>
                                 <div>
                                    { daysLeft }
                                   </div>
                                 </div>
                                 <div className="option-info-point-one">
-                                <div>
-                                Out of the $:
-                                </div>
+                                  <div className="option-info-type">
+                                    OUT OF THE $:
+                                  </div>
                                 <div>
                                    { formatPercentage(percent_out) } 
                                 </div>
                                 </div>
                                 <div className="option-info-point-two">
-                                  <div>
-                                    Smith Rank:
+                                  <div className="option-info-type">
+                                    SMITH RANK:
                                   </div>
                                   <div>
                                     { formatPercentage(odds) }

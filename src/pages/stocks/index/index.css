@@ -39,6 +39,11 @@
   font-size: 1.25rem;
 }
 
+header span.positive {
+  font-size: 1em;
+  
+}
+
 
 .index-stock-page.loader {
   justify-content: center;
@@ -79,13 +84,15 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .positive {
-  background: -webkit-linear-gradient(#4CBB17, #006400);
+  background: -webkit-linear-gradient(#3BB143, #006400);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 0.8em;
   font-weight: normal;
   margin-top: .2em;
 }
+
+
 
 .negative {
   color: #C33030;
@@ -128,7 +135,6 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: row;
   justify-content: space-between;
   margin-left: .25em;
-  margin-right: .25em;
   padding-left: .8em;
   padding-right: .8em;
 }
@@ -136,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p {
 .profit-word {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   font-size: .85em;
 
 }
@@ -147,8 +153,12 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: space-evenly;
   font-size: 1.25em; 
   padding-left: .25em;
-  padding-right: .25em;
-  font-size: 1.25em;
+  font-size: 1.3em;
+  align-items: baseline;
+}
+
+.min-max-profit .positive {
+  font-size: .9em;
 }
 
 .min-max-divider {
@@ -204,7 +214,9 @@ h1, h2, h3, h4, h5, h6, p {
 .column.right {
   flex: 1;
   font-size: .9rem;
-  background-color: #1c1c1e;
+  background-image: linear-gradient(
+    147deg
+    , #28282b 0%, #1c1c1e 20%);
   border-radius: 1em;
   /* display: flex;
   flex-direction: column;
@@ -227,6 +239,16 @@ h1, h2, h3, h4, h5, h6, p {
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: .5em;
+}
+
+.option-info-type {
+  font-size: 0.65rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0.01rem;
+  font-weight: 325;
 }
 
 .column.right ul .option-info-point-one {
@@ -282,6 +304,9 @@ h1, h2, h3, h4, h5, h6, p {
 .stock-and-price {
   display: flex;
   flex-direction: row;
+  text-shadow:.3px .3px .3px #fff;
+
+
 }
 
 .stock-and-price .positive{
@@ -290,6 +315,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: space-evenly;
   font-size: .85em;
   padding-left: .5em;
+  text-shadow: none;
 }
 
 .stock-and-price .negative{
@@ -325,7 +351,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .requirement-price {
-  font-size: .75em;
+  font-size: .95em;
   flex-direction: column;
   display: flex;
   justify-content: flex-end;
