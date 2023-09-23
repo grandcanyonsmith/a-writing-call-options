@@ -1,49 +1,43 @@
-import performanceHooks from "perf_hooks"
+import { performance } from "perf_hooks"
 
-const { performance } = performanceHooks,
-      oneSecond = 1000,
+const oneSecond = 1000,
       oneMinute = 60 * oneSecond,
       oneHour = 60 * oneMinute,
       oneDay = 24 * oneHour
 
-export { performance }
+function getElapsedTime(delta) {
+  let days = Math.floor(delta / oneDay)
+  delta %= oneDay
 
-export function getElapsedTime(delta) {
-  // get total full seconds
-  const days = Math.floor(delta / oneDay)
+  let hours = Math.floor(delta / oneHour)
+  delta %= oneHour
 
-  delta -= days * oneDay
+  let minutes = Math.floor(delta / oneMinute)
+  delta %= oneMinute
 
-  const hours = Math.floor(delta / oneHour)
+  let seconds = Math.floor(delta / oneSecond)
+  delta %= oneSecond
 
-  delta -= hours * oneHour;
+  let milliseconds = delta.toFixed(3)
 
-  const minutes = Math.floor(delta / oneMinute)
-
-  delta -= minutes * oneMinute
-
-  const seconds = Math.floor(delta / oneSecond)
-
-  delta -= seconds * oneSecond
-
-  const milliseconds = String(delta).replace(/\./, "μ")
-
-  return `0${days}:0${hours}:0${minutes}:0${seconds}.${milliseconds}`.replace(/0([1-9][0-9]+[:.])/g, "$1").replace(/^00\:/, "")
+  return `${padZero(days)}:${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}.${milliseconds}`
 }
 
-export async function track(cb, startMessage) {
-  const started = performance.now(),
-        dateOffset = new Date() - Math.floor(started)
+function padZero(number) {
+  return number.toString().padStart(2, '0')
+}
 
-  if(startMessage) startMessage(started + dateOffset)
+async function track(cb, startMessage) {
+  const started = performance.now()
 
-  const result = await cb(),
-        ended = performance.now(),
-        elapsed = Math.abs(started - ended),
-        elapsedTime = getElapsedTime(elapsed)
+  if(startMessage) startMessage(new Date(started))
+
+  const result = await cb()
+  const ended = performance.now()
+  const elapsed = ended - started
+  const elapsedTime = getElapsedTime(elapsed)
 
   return {
-    dateOffset,
     started,
     ended,
     elapsed,
@@ -51,3 +45,5 @@ export async function track(cb, startMessage) {
     result
   }
 }
+
+export { performance, getElapsedTime, track }
