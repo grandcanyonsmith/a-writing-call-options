@@ -2,19 +2,23 @@ import { Connection } from "../db/connection.js"
 
 export async function getLatestScrape() {
   try {
-    
-    const { rows: [ { id, schedule, completed, started_at, completed_at } ] } = await Connection.query(`
+    const { rows: [ scrapeData ] } = await Connection.query(`
       SELECT
         *
       FROM scrape_trackers
-      WHERE completed = 't'
+      WHERE completed = true
       ORDER BY
         schedule DESC,
         id DESC
       LIMIT 1
-      OFFSET 0
     `)
     
+    if (!scrapeData) {
+      throw new Error('No data found');
+    }
+
+    const { id, schedule, completed, started_at, completed_at } = scrapeData;
+
     return {
       id,
       completed,
@@ -24,6 +28,6 @@ export async function getLatestScrape() {
     }
   } catch(err) {
     console.error(err)
-    return {}
+    return null;
   }
 }
