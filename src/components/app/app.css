@@ -3,22 +3,25 @@
   height: 100%;
   overflow: auto;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: black;
-  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;;
+  background-color: #000;
+  font-family: "Capsule Sans Text",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
 
-#main-nav {
+#main-nav, 
+#main-nav .nav-row {
   position: relative;
   width: 100%;
   max-width: 600px;
   overflow: hidden;
   display: flex;
-  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+}
+
+#main-nav {
   padding-bottom: 3rem;
 }
 
@@ -26,13 +29,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
   letter-spacing: 0.1em;
   font-weight: bold;
 }
@@ -40,25 +37,19 @@
 .btn {
   height: 100%;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
   background: #318231;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #fff;
   border: .25rem solid #318231;
-  /* border-top: 0; */
-  border-bottom: 0;
   text-decoration: none;
   border-radius: .8em;
-  
 }
 
 nav .column.btn.is-active {
   background: #393636;
-  color: white;
+  color: #fff;
   border-color: #393636;
-
 }
 
 main {
@@ -66,7 +57,7 @@ main {
   width: 100%;
   overflow: auto;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
