@@ -1,26 +1,19 @@
-export function getScheduledDates(date) {
-  const now = new Date()
-  const hours = typeof process.env.USE_DATE_HOURS === "undefined"
-                  ? (date || now).getHours()
-                  : (parseInt(process.env.USE_DATE_HOURS) || 0)
+export function getScheduledDates(date = new Date()) {
+  const hours = process.env.USE_DATE_HOURS 
+                  ? parseInt(process.env.USE_DATE_HOURS) 
+                  : date.getHours();
 
-  date = date || new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  date.setHours(hours >= 24 ? 23 : hours >= 16 ? 18 : hours >= 6 ? 12 : 0, 0, 0, 0);
 
-  date = new Date(date)
+  const thirtyDaysAgo = new Date(date.getTime());
+  thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+  thirtyDaysAgo.setHours(0, 0, 0, 0);
 
-  if(hours === 24) date.setHours(23, 0, 0, 0)
-  else if(hours > 11) date.setHours(hours < 16 ? 12 : 18, 0, 0, 0)
-  else date.setHours(hours < 6 ? 0 : 6, 0, 0, 0)
-
-  const thirty = new Date(date)
-  thirty.setDate(thirty.getDate() - 30)
-  thirty.setHours(0, 0, 0, 0)
   return {
     schedule: +date,
     date,
-    now,
-    thirty
-  }
-  
+    now: new Date(),
+    thirtyDaysAgo
+  };
 }
-getScheduledDates()
+getScheduledDates();
