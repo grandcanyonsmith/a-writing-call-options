@@ -1,15 +1,13 @@
-import { lazy, Suspense } from "react"
-import { BrowserRouter as Router,
-         NavLink,
-         Switch,
-         Route,
-         Redirect } from "react-router-dom"
-import { Loader } from "components/loader"
-import "./app.css"
+import { lazy, Suspense } from "react";
+import { BrowserRouter as Router, NavLink, Switch, Route, Redirect } from "react-router-dom";
+import { Loader } from "components/loader";
+import "./app.css";
 
-const PurchasePages = lazy(() => import("pages/purchases").then(module => ({ default: module.PurchasePages })))
-const StockPages = lazy(() => import("pages/stocks").then(module => ({ default: module.StockPages })))
-const StrikesPage = lazy(() => import("pages/strikes").then(module => ({ default: module.StrikesPage })))
+const LazyLoadComponent = (component) => lazy(() => import(`pages/${component}`));
+
+const PurchasePages = LazyLoadComponent("purchases");
+const StockPages = LazyLoadComponent("stocks");
+const StrikesPage = LazyLoadComponent("strikes");
 
 export function App() {
   return (
@@ -17,18 +15,10 @@ export function App() {
       <Router>
         <nav id="main-nav">
           <div className="nav-row">
-            <NavLink
-              to="/stocks"
-              className="column btn align-center"
-              activeClassName="is-active"
-            >
+            <NavLink to="/stocks" className="column btn align-center" activeClassName="is-active">
               STOCKS
             </NavLink>
-            <NavLink
-              to="/purchases"
-              className="column btn align-center"
-              activeClassName="is-active"
-            >
+            <NavLink to="/purchases" className="column btn align-center" activeClassName="is-active">
               PURCHASES
             </NavLink>
           </div>
