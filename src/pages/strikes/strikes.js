@@ -3,9 +3,9 @@ import { useHistory } from "react-router-dom";
 import { Loader } from "components/loader";
 import "./strikes.css";
 
-export function StrikesPage() {
+const StrikesPage = () => {
   const [loading, setLoading] = useState(true);
-  const [sortBy, setSortBy] = useState(false);
+  const [sortBy, setSortBy] = useState(null);
   const [error, setError] = useState(null);
   const [rows, setRows] = useState([]);
   const [offset, setOffset] = useState(0);
@@ -14,23 +14,22 @@ export function StrikesPage() {
   const redirectToStock = (ev) => {
     ev.preventDefault();
     ev.stopPropagation();
-    const target = ev.currentTarget;
-    const { ticker } = target.dataset;
+    const { ticker } = ev.currentTarget.dataset;
     history.push(`/stocks/${ticker}`);
   };
 
   const toggleSortBy = (ev) => {
     const column = ev.currentTarget.dataset.column;
-    setSortBy(column === sortBy ? false : column);
+    setSortBy(prevSortBy => prevSortBy === column ? null : column);
     setOffset(0);
   };
 
   const previousPage = () => {
-    setOffset(offset < 50 ? 0 : offset - 50);
+    setOffset(prevOffset => prevOffset < 50 ? 0 : prevOffset - 50);
   };
 
   const nextPage = () => {
-    setOffset(offset + 50);
+    setOffset(prevOffset => prevOffset + 50);
   };
 
   useEffect(() => {
@@ -159,3 +158,5 @@ export function StrikesPage() {
     </div>
   );
 }
+
+export default StrikesPage;
